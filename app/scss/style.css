@@ -1,0 +1,426 @@
+.has-fade {
+  visibility: hidden;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 200ms ease-in-out forwards;
+          animation: fade-in 200ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 200ms ease-in-out forwards;
+          animation: fade-out 200ms ease-in-out forwards;
+}
+
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: url("images/bg-intro-desktop.png"), #ff7a7a;
+  font-size: 0.5rem;
+  font-weight: 400;
+  font-family: 'Poppins';
+  line-height: 1.3;
+  color: white;
+}
+
+@media (min-width: 64em) {
+  body {
+    font-size: 0.8rem;
+  }
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+h1 {
+  font-weight: 600;
+  line-height: 1.15;
+  margin-top: 0px;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
+  font-size: 1rem;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding-top: 4.375rem;
+  padding-right: 1.5rem;
+  padding-bottom: 4.375rem;
+  padding-left: 1.5rem;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-f-d {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 0.875rem 2.1875rem;
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: white;
+  font-weight: 400;
+  font-size: 0.8rem;
+  -webkit-transition: opacity 800ms ease-in-out;
+  transition: opacity 800ms ease-in-out;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 3px 5px #3e3c49;
+          box-shadow: 0px 3px 5px #3e3c49;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  opacity: 0;
+  -webkit-transition: opacity 800ms ease-in-out;
+  transition: opacity 800ms ease-in-out;
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+
+.article {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.article__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media (min-width: 40em) {
+  .article__grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .article__grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.article__item a span {
+  color: #b9b6d3;
+}
+
+.article__signup {
+  font-size: 0.8rem;
+  background-color: #6055a5;
+  margin-bottom: 1.875rem;
+  top: 0 -1.562rem;
+  display: block;
+  width: 100%;
+}
+
+.form {
+  background-color: white;
+  padding: 6.25em 3.4375em;
+  max-width: 59.938em;
+  margin: auto 0;
+  border-radius: 0.5rem;
+  width: 41.938em;
+  -webkit-box-shadow: 0px 3px 5px #3e3c49;
+          box-shadow: 0px 3px 5px #3e3c49;
+}
+
+.form > p {
+  font-size: 0.5rem;
+  color: #b9b6d3;
+  margin-top: 1.125rem;
+}
+
+.form > p a {
+  color: #ff7a7a;
+  font-weight: 600;
+}
+
+.form > p a:hover {
+  color: #6055a5;
+}
+
+.form .tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.form .tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.form .tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: gray;
+  color: gray;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.form .tab-group li a:hover {
+  background: black;
+  color: #3e3c49;
+}
+
+.form .tab-group .active a {
+  background: #ff7a7a;
+  color: #ff7a7a;
+}
+
+.form .tab-content > div:last-child {
+  display: none;
+}
+
+.form label {
+  position: absolute;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  left: 13px;
+  color: #3e3c49;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 0.8rem;
+}
+
+.form label .req {
+  margin: 2px;
+  color: #ff7a7a;
+}
+
+.form label.active {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+
+.form label.active .req {
+  opacity: 0;
+}
+
+.form label.highlight {
+  color: #3e3c49;
+}
+
+.form input, .form textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid gray;
+  border-radius: 0.3rem;
+  color: #3e3c49;
+  -webkit-transition: border-color .25s ease, -webkit-box-shadow .25s ease;
+  transition: border-color .25s ease, -webkit-box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease, -webkit-box-shadow .25s ease;
+}
+
+.form input:focus, .form textarea:focus {
+  outline: 0;
+  border-color: #ff7a7a;
+}
+
+.form textarea {
+  border: 2px solid #b9b6d3;
+  resize: vertical;
+}
+
+.form .field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.form .top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.form .top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+
+.form .top-row > div:last-child {
+  margin: 0;
+}
+
+.form .but {
+  width: 100%;
+}
+
+.form button {
+  border: 0;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 15px 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #38cc8c;
+  color: white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+  background-color: #38cc8c;
+}
+
+.form .button-block {
+  display: block;
+  width: 100%;
+}
+
+.form .forgot {
+  margin-top: -20px;
+  text-align: right;
+}
+
+footer {
+  color: white;
+}
+
+footer .attribution {
+  margin-top: -2rem;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,33 @@
+.article {
+  align-items: center;
+
+  &__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      @include breakpoint-up(medium) {
+          grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include breakpoint-up(large) {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+
+  &__item {
+      a {
+          span {
+              color: $grayish_blue;
+          }
+      }
+  }
+
+  &__signup {
+      font-size: $font-med;
+      background-color: $blue;
+      margin-bottom: 1.875rem;
+      top: 0 -1.562rem;
+      display: block;
+      width: 100%;
+  }
+}
