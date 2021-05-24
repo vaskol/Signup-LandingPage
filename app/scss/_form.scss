@@ -57,13 +57,10 @@
   }
 
   label {
-      position: absolute;
-      transform: translateY(6px);
-      left: 13px;
+   
       color: $dark_blue;
 
-      transition: all 0.25s ease;
-      -webkit-backface-visibility: hidden;
+   display: flex;
       pointer-events: none;
       font-size: $font-med;
       .req {
@@ -135,6 +132,8 @@
       width: 100%;
   }
   button {
+          width: 100%;
+
       border: 0;
       outline: none;
       border-radius: 0.5rem;
