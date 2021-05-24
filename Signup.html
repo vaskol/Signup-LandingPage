@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="app/scss/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,122 +15,69 @@
 <body style='background: url("images/bg-intro-desktop.png"),
  #ff7a7a;  background-size: cover;'>
 
- 
-  <main class="articles container" > 
 
-      <!-- 2 GRID COLUMNS -->
-      <div class="article__grid">
-        
-        <!-- LEFT ITEM -->
-        <div class="article__item container flex flex-jc-c flex-f-d ">
+  <section class="articles container">
 
-          <h1>Learn to code by watching others</h1>
+    <!-- 2 GRID COLUMNS -->
+    <div class="article__grid">
 
-           <p> See how experienced developers solve
-               problems in real-time. Watching
-               scripted tutorials is great ,but 
-               understanding how developers think 
-               is invaluable. 
-           </p>
+      <!-- LEFT ITEM -->
+      <div class="article__item container flex flex-jc-c flex-f-d ">
 
-        </div>
-        
-        <!-- RIGHT ITEM -->
-        <div class="article__item  container flex flex-jc-c flex-f-d flex-ai-c">
-          <a href="#" class="article__signup button">
-            Try it free 7 days
-            <span class ="opac"> then $20/mo. thereafter</span>
-          </a>
+        <h1>Learn to code by watching others</h1>
 
-            <div class="form ">
+        <p> See how experienced developers solve
+          problems in real-time. Watching
+          scripted tutorials is great ,but
+          understanding how developers think
+          is invaluable.
+        </p>
 
-              <div class="tab-content">
-                <div id="signup">   
-                  
-                  <form action="/" method="post">
-                  
-                  
-                    <div class="field-wrap">
-                      <label>
-                        First Name<span class="req">*</span>
-                      </label>
-                      <input type="text" required autocomplete="off" />
-                    </div>
-                
-                    <div class="field-wrap">
-                      <label>
-                        Last Name<span class="req">*</span>
-                      </label>
-                      <input type="text"required autocomplete="off"/>
-                    </div>
-                
-        
-                  <div class="field-wrap">
-                    <label>
-                      Email Address<span class="req">*</span>
-                    </label>
-                    <input type="email"required autocomplete="off"/>
-                  </div>
-                  
-                  <div class="field-wrap">
-                    <label>
-                      Password<span class="req">*</span>
-                    </label>
-                    <input type="password"required autocomplete="off"/>
-                  </div>
-                  
-                  <button type="submit" class="button but">
-                    Claim your free trial</button>
-                  
-                  </form>
-        
-                </div>
-                
-                <div id="login">   
-                  <h1>Welcome Back!</h1>
-                  
-                  <form action="/" method="post">
-                  
-                    <div class="field-wrap">
-                    <label>
-                      Email Address<span class="req">*</span>
-                    </label>
-                    <input type="email"required autocomplete="off"/>
-                  </div>
-                  
-                  <div class="field-wrap">
-                    <label>
-                      Password<span class="req">*</span>
-                    </label>
-                    <input type="password"required autocomplete="off"/>
-                  </div>
-                  
-                  <p class="forgot"><a href="#">Forgot Password?</a></p>
-                  
-                  <button class="button button-block"/>Log In</button>
-                  
-                  </form>
-        
-                </div>
-                
-              </div>
-              <p>
-                By clicking the button, you are agreeing to our <a href="/" target="_blank">Terms and Services</a>
-              </p>
-        </form>
-        
-        </div>
       </div>
 
+      <!-- RIGHT ITEM -->
+      <div class="article__item  container flex flex-jc-c flex-f-d flex-ai-c">
 
-    </main>
+        <a href="#" class="article__signup button">
+          Try it free 7 days
+          <span class="opac"> then $20/mo. thereafter</span>
+        </a>
 
-<footer>
-<div class="attribution">
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-  Coded by <a href="#">Vasiliki Kollia</a>.
-</div>
-</footer>
-  <script src="app/js/script.js"></script>
+
+        <form  class="form "action="mailto:vassoula88@hotmail.com" method="POST" autocomplete="on" enctype="multipart/form-data"
+          name="EmailForm" onsubmit="return required()">
+
+          <label for="fname">First name:<span class="req">*</span></label><br>
+          <input type="text" id="fname" name="fname" placeholder="First Name" required><br>
+
+          <label for="lname">Last name:<span class="req">*</span></label><br>
+          <input type="text" id="lname" name="lname" placeholder="Last Name" required><br>
+
+          <label for="email">Email:<span class="req">*</span></label><br>
+          <input type="email" id="email" name="email" placeholder="Email" required><br>
+
+          <label for="tel">Telephone:</label><br>
+          <input type="tel" id="tel" name="tel" placeholder="ex: +3010000000" minlength="10"><br>
+
+          <button type="submit" href="#" class="article__trial button">
+            Claim your free trial
+          </button>
+        </form>
+        <p>
+          By clicking the button, you are agreeing to our 
+          <a href="/" target="_blank">Terms and Services</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Vasiliki Kollia</a>.
+    </div>
+
+    <script src="app/js/script.js"></script>
 </body>
+
 </html>
